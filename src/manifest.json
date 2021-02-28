@@ -11,6 +11,14 @@
   "icons": {
     "128": "icon-128.png"
   },
+  "content_scripts": [
+    {
+      "all_frames" : false,
+      "run_at":"document_idle",
+      "js": ["content.bundle.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
